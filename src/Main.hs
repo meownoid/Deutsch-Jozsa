@@ -21,7 +21,6 @@ performDJ n f = do
     let bits = init . dec2bin (2 ^ n) $ res
     return $ if sum bits == 0 then "constant" else "balansed"
 
-
 main :: IO ()
 main = do
     putStrLn "Enter functions in format '<name> <args> = <expression>'"
