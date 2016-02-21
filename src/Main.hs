@@ -5,6 +5,8 @@ import Gate
 import Utils
 import FunctionParser
 
+import System.IO
+
 circuitDJ :: QGate -> QRegister
 circuitDJ gateU = qregister (replicate m 0) |+> qbit 1
                   |> gateH n
@@ -34,6 +36,7 @@ loop :: IO ()
 loop = do
     putStrLn ""
     putStr "#> "
+    hFlush stdout
     input <- getLine
     let str = lstrip input
     if str == "quit"
