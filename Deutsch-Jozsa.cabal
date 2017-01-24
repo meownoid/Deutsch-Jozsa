@@ -1,22 +1,23 @@
 name:                 Deutsch-Jozsa
 version:              0.1.0.0
-synopsis:             Deutsch-Jozsa algorithm demo
--- description:
--- license:
--- license-file:
-homepage:             
+synopsis:             Deutsch-Jozsa quantum algorithm simulation demo
+license:              MIT
+license-file:         LICENSE
+homepage:             https://github.com/meownoid/Deutsch-Jozsa
 author:               Egor Malykh
 maintainer:           fnk@fea.st
 category:             Math
--- copyright:
+copyright:            (c) 2015-2017 Egor Malykh
 build-type:           Simple
--- extra-source-files:
 cabal-version:        >=1.10
 
-executable Deutsch-Jozsa
+executable djsim
   main-is:              Main.hs
-  -- other-modules:
-  -- other-extensions:
+  other-modules:        FunctionParser,
+                        Gate,
+                        Matrix,
+                        Quantum,
+                        Utils
   ghc-options:          -O2 -optc-O3
   build-depends:        base >= 4.7 && < 5, parsec, random
   hs-source-dirs:       src

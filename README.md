@@ -4,11 +4,10 @@ Deutsch-Jozsa quantum algorithm simulation written in pure haskell.
 
 ## Build
 
-Build and install to specified path:
-
 ```
-cabal build
-cabal install --prefix=PATH
+stack setup
+stack build
+stack exec djsim
 ```
 
 ## Usage
@@ -23,9 +22,19 @@ Operators:
 * | - or
 * ^ - xor
 
-### Examples
+### Example
 ```
-f x = x
-g x = 1
-h x y = ((!x) ^ y) ^ 1
+#> f x = x
+function f is balansed
+
+#> g x = 1
+function g is constant
+
+#> h x y = ((!x) ^ y) ^ 1
+function h is balansed
+
+#> f q w e r t y = q ^ w & e | r ^ t & y
+function f is constant
+
+#> quit
 ```
