@@ -13,7 +13,7 @@ stack build
 ## Run
 
 ```shell script
-stack exec djsim
+stack exec dj-simulation
 ```
 
 ## Usage

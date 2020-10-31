@@ -1,17 +1,17 @@
 name:                 Deutsch-Jozsa
 version:              0.1.0.0
-synopsis:             Deutsch-Jozsa quantum algorithm simulation demo
+synopsis:             Deutsch-Jozsa quantum algorithm simulation
 license:              MIT
 license-file:         LICENSE
 homepage:             https://github.com/meownoid/Deutsch-Jozsa
 author:               Egor Malykh
 maintainer:           fnk@fea.st
 category:             Math
-copyright:            (c) 2015-2017 Egor Malykh
+copyright:            (c) Egor Malykh
 build-type:           Simple
 cabal-version:        >=1.10
 
-executable djsim
+executable dj-simulation
   main-is:              Main.hs
   other-modules:        FunctionParser,
                         Gate,
