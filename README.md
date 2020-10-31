@@ -1,28 +1,40 @@
 # Deutsch-Jozsa
 
-Deutsch-Jozsa quantum algorithm simulation written in pure haskell.
+This is a [Deutsch-Jozsa quantum algorithm](https://en.wikipedia.org/wiki/Deutsch–Jozsa_algorithm)
+simulation written in pure haskell.
 
 ## Build
 
-```
+```shell script
 stack setup
 stack build
+```
+
+## Run
+
+```shell script
 stack exec djsim
 ```
 
 ## Usage
 
-Run and provide some constant or balanced functions in format
-```
-<name> <args> = <expr>
-```
-Operators:
+This program provides an interactive environment where you can enter your custom
+boolean functions. Four operators are supported:
+
 * ! - unary not
 * & - and
 * | - or
 * ^ - xor
 
-### Example
+You can write function definitions like following.
+```
+<name> <args> = <expr>
+```
+
+Use `quit` to exit.
+
+## Example
+
 ```
 #> f x = x
 function f is balansed
